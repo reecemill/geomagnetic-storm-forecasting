@@ -1,5 +1,7 @@
 # Geomagnetic Storm Forecasting
 
+**[Explore the results interactively](https://reecemill.github.io/storms/)**: storms by year, every forecast against NOAA, and the forecasts day by day.
+
 ## The problem
 When a burst of solar wind hits Earth's magnetic field hard enough, it causes a geomagnetic storm. Storms drag satellites down (SpaceX lost about 40 new Starlink satellites to a fairly modest one in February 2022), disrupt GPS and radio, and in extreme cases threaten power grids. Satellite operators and grid operators plan around forecasts, and the standard one in the US is NOAA's: every day at 22:00 UTC, it publishes the probability of a storm on each of the next three days.
 
@@ -54,7 +56,7 @@ Four model families, each with its settings chosen on 2017–2021, retrained on 
 2. [`02_baselines`](notebooks/02_baselines.ipynb): climatology, persistence, the 27-day echo, and NOAA's forecast.
 3. [`03_models`](notebooks/03_models.ipynb): logistic regression, gradient boosting, a recurrent network, and gradient boosting with NOAA's forecast, against NOAA (a few minutes to run).
 
-Shared code is in [`src/storms.py`](src/storms.py) (loading the data), [`src/features.py`](src/features.py) (what's known at 21:00 UTC), and [`src/sequence.py`](src/sequence.py) (the recurrent network). Notebook 03 checks that changing anything after the issue time leaves its inputs unchanged.
+Shared code is in [`src/storms.py`](src/storms.py) (loading the data), [`src/features.py`](src/features.py) (what's known at 21:00 UTC), and [`src/sequence.py`](src/sequence.py) (the recurrent network). Notebook 03 checks that changing anything after the issue time leaves its inputs unchanged. The notebooks save the numbers behind their charts to [`results/`](results/), and `scripts/build_site_data.py` turns them into the web page's data.
 
 ## Setup
 ```

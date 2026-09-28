@@ -1,0 +1,16 @@
+lead days,forecast,Brier,skill vs climatology,log loss
+1,Climatology,0.14011,0.0,0.45369
+1,Persistence,0.12823,0.08474,0.42232
+1,27-day echo,0.13912,0.00702,0.45077
+1,"NOAA, as published",0.12401,0.11491,0.40583
+1,"NOAA, recalibrated",0.1291,0.07852,0.41382
+2,Climatology,0.14206,0.0,0.45876
+2,Persistence,0.14599,-0.02767,0.47143
+2,27-day echo,0.14109,0.00678,0.45602
+2,"NOAA, as published",0.1332,0.06234,0.44059
+2,"NOAA, recalibrated",0.13455,0.05282,0.43436
+3,Climatology,0.14151,0.0,0.45726
+3,Persistence,0.14559,-0.02881,0.47026
+3,27-day echo,0.14056,0.00674,0.45455
+3,"NOAA, as published",0.13723,0.03027,0.46792
+3,"NOAA, recalibrated",0.13755,0.02804,0.44728
