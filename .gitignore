@@ -1,0 +1,10 @@
+# Environment
+.venv/
+
+# Downloaded data: freely re-downloadable with scripts/download_data.py
+data/
+
+# Python / Jupyter / OS
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
