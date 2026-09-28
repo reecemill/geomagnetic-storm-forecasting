@@ -87,7 +87,8 @@ def load_noaa_forecasts():
         for day in range(3):
             rows.append({"issued": issued, "lead_days": day + 1, "date": issued + pd.Timedelta(days=day + 1),
                          "p_active": active[day] / 100, "p_minor": minor[day] / 100, "p_major": major[day] / 100})
-    return pd.DataFrame(rows)
+    # A few days have two reports (an amended one); keep the one filed last.
+    return pd.DataFrame(rows).drop_duplicates(["issued", "lead_days"], keep="last").reset_index(drop=True)
 
 
 def daily_max_kp(kp):

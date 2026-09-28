@@ -1,0 +1,5 @@
+family,log_loss,settings
+logistic regression,0.22533,{'C': 1.0}
+gradient boosting,0.21862,"{'learning_rate': 0.03, 'max_leaf_nodes': 7, 'max_iter': 400}"
+gradient boosting + NOAA,0.20165,"{'learning_rate': 0.03, 'max_leaf_nodes': 7, 'max_iter': 400}"
+recurrent network,0.23176,{'hidden units': 32}
